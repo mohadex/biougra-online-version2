@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Biougra Online — Local community design system
+   All colors HSL. Orange / beige / dark gray palette.
+*/
+
+@layer base {
+  :root {
+    --background: 38 40% 98%;
+    --foreground: 220 15% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 16%;
+
+    /* Brand orange */
+    --primary: 22 92% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 28 100% 96%;
+    --primary-glow: 30 100% 65%;
+
+    /* Warm beige */
+    --secondary: 36 38% 94%;
+    --secondary-foreground: 220 15% 20%;
+
+    --muted: 36 25% 95%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 28 100% 96%;
+    --accent-foreground: 22 92% 38%;
+
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 30 20% 90%;
+    --input: 30 20% 92%;
+    --ring: 22 92% 52%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(22 92% 52%) 0%, hsl(30 100% 60%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(36 50% 98%) 0%, hsl(28 60% 95%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(22 92% 52% / 0.92) 0%, hsl(14 85% 45% / 0.92) 100%);
+
+    /* Shadows */
+    --shadow-card: 0 1px 2px hsl(22 30% 20% / 0.04), 0 8px 24px -12px hsl(22 60% 30% / 0.12);
+    --shadow-elevated: 0 10px 40px -12px hsl(22 60% 30% / 0.22);
+    --shadow-glow: 0 0 0 6px hsl(22 92% 52% / 0.12);
+
+    /* Motion */
+    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 18% 10%;
+    --foreground: 36 30% 96%;
+    --card: 220 18% 13%;
+    --card-foreground: 36 30% 96%;
+    --popover: 220 18% 13%;
+    --popover-foreground: 36 30% 96%;
+    --primary: 22 92% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 36 30% 96%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 22 50% 22%;
+    --accent-foreground: 22 92% 75%;
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 22 92% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern", "liga";
+    font-family: 'Tajawal', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    @apply font-extrabold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .card-soft {
+    @apply rounded-2xl bg-card border border-border/60 shadow-[var(--shadow-card)] transition-[var(--transition-base)] hover:shadow-[var(--shadow-elevated)] hover:-translate-y-0.5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground px-3 py-1 text-xs font-medium;
+  }
+
+  .gradient-warm {
+    background-image: var(--gradient-warm);
+  }
+}
