@@ -3,6 +3,7 @@ import { Search, ShoppingBasket, Phone, MessageCircle, Plus } from "lucide-react
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
+import StoriesBar from "@/components/StoriesBar";
 import BusinessCard from "@/components/BusinessCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -85,8 +86,14 @@ const Index = () => {
         </div>
       </section>
 
+      {/* STORIES */}
+      <section className="container-page mt-8">
+        <h2 className="font-display text-xl sm:text-2xl font-extrabold">قصص بيوكرى أونلاين</h2>
+      </section>
+      <StoriesBar />
+
       {/* QUICK ACCESS */}
-      <section className="container-page -mt-10 sm:-mt-14 relative z-10">
+      <section className="container-page mt-6 relative z-10">
         <div className="rounded-3xl bg-card shadow-elevated p-4 sm:p-6 border border-border/60">
           <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
             {quickAccess.map((item) => (
