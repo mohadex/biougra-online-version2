@@ -38,9 +38,9 @@ const Index = () => {
             <p className="mt-4 font-brand text-3xl sm:text-5xl tracking-wide text-primary-foreground drop-shadow-md font-black">
               بيوكرى أونلاين
             </p>
-            <h1 className="mt-2 font-display text-3xl sm:text-5xl font-black leading-tight">
+            <h4 className="mt-2 text-3xl sm:text-5xl !font-light leading-tight bg-black/25 px-4 py-2 rounded-xl">
               أول منصة رقمية في بيوكرى
-            </h1>
+            </h4>
             <p className="mt-4 text-base sm:text-lg text-primary-foreground/90 max-w-xl">
               ابحث عن خدمة، اكتشف محل قريب، تابع أوقات الصلاة، أسعار السوق،
               صيدلية الحراسة، والمزيد من المعلومات اليومية المفيدة.
